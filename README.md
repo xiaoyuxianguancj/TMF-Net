@@ -1,50 +1,34 @@
 # TMF-Net: A Dynamic–Static Collaborative Framework for Mechanism-Resolved Age Identification in Medicinal Plants
 
-本仓库提供“TMF-Net：面向药用植物生长年份识别的动态–静态协同框架”的研究成果，包括模型代码、数据说明与移动端应用说明。
-
-本研究围绕药用植物生长年份无损识别与机制解析问题展开，提出一种跨尺度、机制可验证的深度学习建模方法。模型在自建多物候金钗石斛数据集上取得 F1 94.73% 的性能，并在跨属名贵药用植物白及数据集及跨作物（香蕉、番茄）时序任务中验证其稳定泛化能力。
+This repository provides the research resources for “TMF-Net: A Dynamic–Static Collaborative Framework for Growth-Year Identification of Medicinal Plants”, including the model implementation, dataset description, and documentation for the mobile application.
 
 ---
 
-## 📌 摘要
+## Abstract
 
-生长年份主导着药用植物活性成分积累与品质分级，但现有鉴别手段依赖破坏性检测，缺乏高效、无损且机制可验证的方法，成为规模化质量控制的瓶颈。尽管深度学习显著提升了识别精度，其建模仍主要依赖静态表型特征，且可解释性多停留于决策区域可视化层面，尚未建立与真实发育机制之间的实证关联。
+Abstract
+The growing year is a key determinant of the medicinal and economic value of medicinal materials, yet current identification methods rely on destructive detection and lack efficient, non-destructive, and mechanistically verifiable approaches, constituting a bottleneck for large-scale quality control. Although deep learning has significantly improved recognition accuracy, its modeling still mainly depends on static phenotypic features, and its interpretability mostly remains at the visualization of decision regions, without establishing empirical links to real developmental mechanisms. In this paper, based on a self-constructed multi-phenological dataset of the precious medicinal plant Dendrobium nobile, a dynamic and static synergistic framework, TMF-Net, was proposed. Cross-phenological growth rate differences were converted into computable temporal difference features, and a species-decoupled growth dynamic representation was constructed through fine-grained structural enhancement and adaptive feature fusion. An F1 score of 94.73% was achieved, significantly outperforming mainstream convolutional architectures. The stable generalizability of the proposed method was further validated on a self-constructed cross-genus dataset of the precious medicinal plant Bletilla striata and on cross-crop (banana and tomato) temporal tasks, and a general temporal processing capability that can effectively adapt to different crops and different temporal scenarios was demonstrated. A mobile application developed based on the model was applied to realize plant age identification for medicinal plants, further verifying the deployability and practical feasibility of the method. At the mechanistic level, the stem node regions of D. nobile focused on by the model were highly consistent with the temporal characteristics of progressive lignin deposition at the cellular microscopic level. Integrated transcriptomic and metabolomic analyses further confirmed the coordinated regulation of the lignin biosynthesis pathway, indicating that the discriminative features of the model corresponded to genuine tissue developmental programs rather than accidental phenotypic differences. Thus, a cross-scale mechanistic loop from deep visual representations to molecular regulatory networks was constructed, advancing deep learning models from decision visualization to mechanistic verifiability and providing a generalizable research paradigm for the intelligent analysis of plant growth status.
 
-本文基于自建的多物候期名贵药用植物金钗石斛数据集，提出动态与静态协同框架 TMF-Net，将跨物候生长速率差异转化为可计算的时序差分特征，并通过细粒度结构增强与自适应特征融合构建物种解耦的生长动态表征。模型取得 F1 94.73% 的性能，显著优于主流卷积架构，并在跨属白及数据集与跨作物（香蕉、番茄）时序任务中验证其稳定泛化能力。
+# 📂 Dataset Description
 
-基于该模型开发的移动端应用实现药用植物年份识别，验证了方法的可部署性与实际应用可行性。
-
-在机制层面，模型关注的金钗石斛茎节区域与细胞显微层面木质素渐进沉积的时序特征高度一致；转录组与代谢组联合分析进一步证实木质素生物合成通路的协同调控，构建了从深度视觉表征到分子调控网络的跨尺度机制闭环。
-
----
-
-# 📂 数据集说明
-
-## 自建两种珍贵的药用植物数据集
-Dataset
-
-## 跨作物时序任务
+## Self-Constructed Datasets of Two Valuable Medicinal Plant Species
+The two self-constructed datasets of medicinal plants supporting the conclusions of this article are available in the Zenodo repository at https://doi.org/10.5281/zenodo.20177266. The data will be made publicly available upon acceptance of the manuscript.
+## Cross-Crop Temporal Task
 
 - [Banana RipeNess Classification Dataset (Kaggle)](https://www.kaggle.com/datasets/shahRiaR26s/baNaNa-RipeNess-classificatioN-dataset)
 - [Tomato Growth Stage Recognition Dataset (Kaggle)](https://www.kaggle.com/datasets/swapNilNaique/tomato-data)
-- 用于验证模型的通用时序处理能力
+- to evaluate the model’s general temporal modeling capability
+---
+
+# 🚀 Download Pretrained Model
+
+Due to the large size of the dataset and model files, they are not hosted directly on GitHub.
+
+- The architecture of TMF-Net is available in the model directory.
 
 ---
 
-# 🚀 下载模型
+# 📱 Mobile Application
 
-由于数据与模型文件较大，未直接托管于 GitHub。
+- A mobile application was developed based on TMF-Net. Please refer to the App directory for details.  
 
-- `models.zip`
-
----
-
-# 📱 移动端应用
-
-基于 TMF-Net 开发移动端应用，实现：
-
-- 实时拍照识别  
-- 现场年份判定  
-- 模型轻量化部署  
-
-验证了模型的工程可落地性与产业应用潜力。
