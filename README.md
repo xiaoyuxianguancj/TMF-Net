@@ -1,5 +1,5 @@
 # Few-shot transferable deep learning enables growth-year identification and cross-scale multi-omics associations in the precious medicinal orchid *Dendrobium nobile*
-This repository provides the research resources for “TMF-Net: A Dynamic–Static Collaborative Framework for Growth-Year Identification of Medicinal Plants”, including the model implementation, dataset description, and documentation for the mobile application.
+This repository provides the research resources for Few-shot transferable deep learning enables growth-year identification and cross-scale multi-omics associations in the precious medicinal orchid *Dendrobium nobile*, including the model implementation, dataset description, and documentation for the mobile application.
 
 ---
 
