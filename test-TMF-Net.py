@@ -9,7 +9,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 try:
     import importlib.util
-    module_path = r"C:\Users\30393\Desktop\下一篇论文准备\TMF-Net\TMF-Net.py"
+    module_path = "TMF-Net.pth"
     spec = importlib.util.spec_from_file_location("branch_resnet_model", module_path)
     branch_resnet_model = importlib.util.module_from_spec(spec)
     sys.modules["branch_resnet_model"] = branch_resnet_model
@@ -25,7 +25,7 @@ except Exception as e:
     sys.exit(1)
 
 TEST_DATA_PATH = r"D:\dataset\DNS\test"
-MODEL_PATH = r"C:\Users\30393\Desktop\下一篇论文准备\TMF-Net\TMF-Net.pth"
+MODEL_PATH = "TMF-Net.pth"
 BATCH_SIZE = 8
 NUM_CLASSES = 3
 
